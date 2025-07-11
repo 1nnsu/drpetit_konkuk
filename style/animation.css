@@ -3,7 +3,7 @@
 
 
 @keyframes fadeIn {
-    0% {transform: translate3d(0px, 30px, 0px); }
+    0% {transform: translate3d(0px, 20px, 0px); }
     100% { opacity: 1; transform: translate3d(0px, 0px, 0px); }
 }
 @keyframes fadeInDown {
@@ -18,3 +18,81 @@
     0% { opacity: 0; transform: translate3d(-30px, 0, 0px); }
     100% { opacity: 1; transform: translate3d(0px, 0px, 0px); }
 }
+
+@keyframes circleNum {
+    0%, 100% { transform: rotate(10deg) scale(0.9); }
+    50% { transform: rotate(0deg) scale(1.2); }
+}
+@keyframes circleOut {
+    0%, 100% { transform: scale(0.6); }
+    50% { transform: scale(1.2); }
+}
+.num_circle_Box .num { animation: circleNum 1.5s ease-in-out infinite; }
+.num_circle_Box .circle_out { animation: circleOut 1.5s ease-in-out infinite; }
+
+section.sec2 li.purple .title_box .dp_title.small { opacity: 0; }
+section.sec2 li.purple .title_box.on .dp_title.small { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; }
+section.sec2 li.purple .title_box .dp_title { opacity: 0; }
+section.sec2 li.purple .title_box.on .dp_title { animation: fadeIn 0.5s ease-in-out 0.2s 1 forwards running; }
+
+section.sec2 li.purple .item .sec2_img { opacity: 0; }
+section.sec2 li.purple .item.on .sec2_img { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; }
+section.sec2 li.purple .item .text_2 { opacity: 0; }
+section.sec2 li.purple .item.on .text_2 { animation: fadeIn 0.5s ease-in-out 0.2s 1 forwards running; }
+section.sec2 li.purple .item .text_bg { opacity: 0; }
+section.sec2 li.purple .item.on .text_bg { animation: fadeIn 0.5s ease-in-out 0.4s 1 forwards running; }
+
+section.sec2 li.orange .title_box .dp_title.small { opacity: 0; }
+section.sec2 li.orange .title_box.on .dp_title.small { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; }
+section.sec2 li.orange .title_box .dp_title { opacity: 0; }
+section.sec2 li.orange .title_box.on .dp_title { animation: fadeIn 0.5s ease-in-out 0.2s 1 forwards running; }
+
+section.sec2 li.orange .item .sec2_img { opacity: 0; }
+section.sec2 li.orange .item.on .sec2_img { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; }
+section.sec2 li.orange .item .text_2 { opacity: 0; }
+section.sec2 li.orange .item.on .text_2 { animation: fadeIn 0.5s ease-in-out 0.2s 1 forwards running; }
+section.sec2 li.orange .item .text_bg { opacity: 0; }
+section.sec2 li.orange .item.on .text_bg { animation: fadeIn 0.5s ease-in-out 0.4s 1 forwards running; }
+
+section.sec2 li.blue .title_box .dp_title.small { opacity: 0; }
+section.sec2 li.blue .title_box.on .dp_title.small { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; }
+section.sec2 li.blue .title_box .dp_title { opacity: 0; }
+section.sec2 li.blue .title_box.on .dp_title { animation: fadeIn 0.5s ease-in-out 0.2s 1 forwards running; }
+
+section.sec2 li.blue .item .sec2_img { opacity: 0; }
+section.sec2 li.blue .item.on .sec2_img { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; }
+section.sec2 li.blue .item .text_2 { opacity: 0; }
+section.sec2 li.blue .item.on .text_2 { animation: fadeIn 0.5s ease-in-out 0.2s 1 forwards running; }
+section.sec2 li.blue .item .text_bg { opacity: 0; }
+section.sec2 li.blue .item.on .text_bg { animation: fadeIn 0.5s ease-in-out 0.4s 1 forwards running; }
+
+section.sec2 li.violet .title_box .dp_title.small { opacity: 0; }
+section.sec2 li.violet .title_box.on .dp_title.small { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; }
+section.sec2 li.violet .title_box .dp_title { opacity: 0; }
+section.sec2 li.violet .title_box.on .dp_title { animation: fadeIn 0.5s ease-in-out 0.2s 1 forwards running; }
+
+section.sec2 li.violet .item .sec2_img { opacity: 0; }
+section.sec2 li.violet .item.on .sec2_img { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; }
+section.sec2 li.violet .item .text_2 { opacity: 0; }
+section.sec2 li.violet .item.on .text_2 { animation: fadeIn 0.5s ease-in-out 0.2s 1 forwards running; }
+section.sec2 li.violet .item .text_bg { opacity: 0; }
+section.sec2 li.violet .item.on .text_bg { animation: fadeIn 0.5s ease-in-out 0.4s 1 forwards running; }
+
+/* sec3 */
+section.sec3 .sec3_div_1 .dp_title { opacity: 0; }
+section.sec3 .sec3_div_1.on .dp_title { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; }
+section.sec3 .sec3_div .mapBox { opacity: 0; }
+section.sec3 .sec3_div.on .mapBox { animation: fadeIn 0.5s ease-in-out 0.2s 1 forwards running; }
+section.sec3 .sec3_div ul .list1 .text_1 { opacity: 0; }
+section.sec3 .sec3_div ul.on .list1 .text_1 { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; }
+section.sec3 .sec3_div ul .list1 .text_2 { opacity: 0; }
+section.sec3 .sec3_div ul.on .list1 .text_2 { animation: fadeIn 0.5s ease-in-out 0.2s 1 forwards running; }
+section.sec3 .sec3_div ul .list2 .text_1 { opacity: 0; }
+section.sec3 .sec3_div ul.on .list2 .text_1 { animation: fadeIn 0.5s ease-in-out 0.3s 1 forwards running; }
+section.sec3 .sec3_div ul .list2 .text_2 { opacity: 0; }
+section.sec3 .sec3_div ul.on .list2 .text_2 { animation: fadeIn 0.5s ease-in-out 0.4s 1 forwards running; }
+
+section.sec3 .sec3_div_2 .dp_title { opacity: 0; }
+section.sec3 .sec3_div_2.on .dp_title { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; }
+section.sec3 .sec3_div_2 .sec3_content { opacity: 0; }
+section.sec3 .sec3_div_2.on .sec3_content { animation: fadeIn 0.5s ease-in-out 0.2s 1 forwards running; }

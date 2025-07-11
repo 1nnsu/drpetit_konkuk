@@ -16,17 +16,193 @@
         <script type="text/javascript" src="./script/swiper.min.js"></script>
         <script type="text/javascript" src="./script/customBoard.js"></script>
         <script type="text/javascript" src="./script/common_jp.js"></script>
+
         <!-- 패럴렉스 -->
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     </head>
     <body>
-        <main id="smooth-wrapper">
-            <article id="smooth-content">
-                
-            </article>
+        <main>
+            <section class="sec1">
+                <div class="inner">
+                    <img src="./img/main/sec1/sec1_img.jpg" alt="">
+                </div>
+            </section>
+            <section class="sec2">
+                <div class="inner">
+                    <ul>
+                        <li class="list1 purple">
+                            <div class="title_box ani">
+                                <div class="num_circle_Box">
+                                    <div class="num">1</div>
+                                    <div class="circle_in"></div>
+                                    <div class="circle_out"></div>
+                                </div>
+                                <p class="dp_title small">本院特色</p>
+                                <p class="dp_title">
+                                    <span class="under">專注於每位顧客療程的舒適環 境</span>
+                                </p>
+                                <img src="./img/bg_img.png" alt="" class="bg_img">
+                            </div>
+                            <div class="item ani">
+                                <div class="graph_div">
+                                    <canvas id="myChart" width="100%" height="100%"></canvas>
+                                </div>
+                                <p class="text_2">與流水線式醫美不同，本院每位院長每日接待不超過8位顧客。</p>
+                                <p class="text_bg">包括代表院長在內的所有院長，皆根據個人需求，細緻且用心地為您施作療程</p>
+                            </div>
+                        </li>
+                        <li class="list1 orange">
+                            <div class="title_box ani">
+                                <div class="num_circle_Box">
+                                    <div class="num">2</div>
+                                    <div class="circle_in"></div>
+                                    <div class="circle_out"></div>
+                                </div>
+                                <!-- <p class="dp_title small">本院特色</p> -->
+                                <p class="dp_title">
+                                    <span class="under">深受當地韓國人與留學生口碑推薦的醫美診所</span>
+                                </p>
+                                <img src="./img/bg_img.png" alt="" class="bg_img">
+                            </div>
+                            <div class="item ani">
+                                <img src="./img/main/sec2/sec2_img2.png" alt="" class="sec2_img">
+                                <p class="text_2">提供個人化療程，深受本地人與中國留學生青睞的醫美診所。</p>
+                                <p class="text_bg">透過一對一客製化療程設計，回診率超過80%。</p>
+                            </div>
+                        </li>
+                        <li class="list1 blue">
+                            <div class="title_box ani">
+                                <div class="num_circle_Box">
+                                    <div class="num">3</div>
+                                    <div class="circle_in"></div>
+                                    <div class="circle_out"></div>
+                                </div>
+                                <!-- <p class="dp_title small">本院特色</p> -->
+                                <p class="dp_title">
+                                    <span class="under">為達到最佳療效，配備最先進的醫療設備</span>
+                                </p>
+                                <img src="./img/bg_img.png" alt="" class="bg_img">
+                            </div>
+                            <div class="item ani">
+                                <img src="./img/main/sec2/sec2_img3.png" alt="" class="sec2_img">
+                                <p class="text_2">
+                                    <span>
+                                        本院擁有Sciton BBL、Ultherapy Prime、Thermage FLX、ONDA、 <br/>
+                                        Soprano Titanium、Clarity、Potenza雷射等高端設備，
+                                    </span>
+                                    不僅可進行拉提，亦可有效針對脂肪分解、泛紅、色素沉澱與美白等問題，全面覆蓋。
+                                </p>
+                                <p class="text_bg">皆為經過驗證、效果卓越的頂級儀器。</p>
+                            </div>
+                        </li>
+                        <li class="list1 violet">
+                            <div class="title_box ani">
+                                <div class="num_circle_Box">
+                                    <div class="num">4</div>
+                                    <div class="circle_in"></div>
+                                    <div class="circle_out"></div>
+                                </div>
+                                <!-- <p class="dp_title small">本院特色</p> -->
+                                <p class="dp_title">
+                                    <span class="under">兩韓學會及對外活動</span>
+                                </p>
+                                <img src="./img/bg_img.png" alt="" class="bg_img">
+                            </div>
+                            <div class="item ani">
+                                <img src="./img/main/sec2/sec2_img3.png" alt="" class="sec2_img">
+                                <p class="text_2">
+                                    我們持續參與各類學會及選美評審等對外活動
+                                </p>
+                                <p class="text_bg">致力於為顧客提供更先進、更專業的療程服務。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="sec3">
+                <div class="inner">
+                    <div class="sec3_div sec3_div_1 ani">
+                        <p class="dp_title">交通指南</p>
+                        <div class="mapBox">
+                            <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.610846319686!2d127.0688396763285!3d37.540669772045206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca50cabb34b9d%3A0x558358620a74b1cc!2z64ul7YSw7IGY652g7J2Y7JuQIOqxtOuMgOygkA!5e0!3m2!1szh-CN!2szh-CN!4v1752127067412!5m2!1szh-CN!2szh-CN"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                        <ul class="ani">
+                            <li class="list1">
+                                <div class="item">
+                                    <p class="text_1">
+                                        地址
+                                    </p>
+                                    <p class="text_2">
+                                        首爾市廣津區陵東路110號 Star City A棟3樓304室
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="list2">
+                                <div class="item">
+                                    <p class="text_1">
+                                        地鐵
+                                    </p>
+                                    <p class="text_2">
+                                        2號線 / 7號線 建大入口站（3號出口）步行1分鐘
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sec3_div sec3_div_2 ani">
+                        <p class="dp_title">診所內部照片</p>
+                        <div class="sec3_content">
+                            <!-- Swiper -->
+                            <div class="swiper sec3_Swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="imgBox">
+                                            <img src="./img/main/sec3/sec3_img_1.png" alt="" class="sec3_img">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="imgBox">
+                                            <img src="./img/main/sec3/sec3_img_2.png" alt="" class="sec3_img">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="imgBox">
+                                            <img src="./img/main/sec3/sec3_img_3.png" alt="" class="sec3_img">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="imgBox">
+                                            <img src="./img/main/sec3/sec3_img_4.png" alt="" class="sec3_img">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="imgBox">
+                                            <img src="./img/main/sec3/sec3_img_5.png" alt="" class="sec3_img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="arrow_div">
+                                <div class="pre_btn">
+                                    <img src="./img/main/sec3/prev_btn.png" alt="" class="pre_btn">
+                                </div>
+                                <div class="next_btn">
+                                    <img src="./img/main/sec3/next_btn.png" alt="" class="next_btn">
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
     </body>
 </html>
