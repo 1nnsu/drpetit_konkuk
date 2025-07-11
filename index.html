@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
+         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!--스타일-->
@@ -11,11 +11,17 @@
         <link rel="stylesheet" href="./style/swiper.min.css">
         <link rel="stylesheet" href="./style/animation.css">
         <link rel="stylesheet" href="./style/customBoard.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+                
         <!--스크립트-->
         <script type="text/javascript" src="./script/script.js"></script>
         <script type="text/javascript" src="./script/swiper.min.js"></script>
         <script type="text/javascript" src="./script/customBoard.js"></script>
         <script type="text/javascript" src="./script/common_jp.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
 
         <!-- 패럴렉스 -->
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
@@ -23,13 +29,15 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
     </head>
     <body>
         <main>
             <section class="sec1">
                 <div class="inner">
-                    <img src="./img/main/sec1/sec1_img.jpg" alt="">
+                    <div class="logo_box">
+                        <img src="./img/main/sec1/top_logo.png" alt="" class="top_logo">
+                    </div>
+                    <img src="./img/main/sec1/sec1_img.jpg" alt="" class="sec1_img2">
                 </div>
             </section>
             <section class="sec2">
@@ -125,6 +133,8 @@
                 </div>
             </section>
             <section class="sec3">
+                <img src="./img/main/sec3/red_blur1.png" alt="" class="sec3_blur sec3_blur1">
+                <img src="./img/main/sec3/red_blur2.png" alt="" class="sec3_blur sec3_blur2">
                 <div class="inner">
                     <div class="sec3_div sec3_div_1 ani">
                         <p class="dp_title">交通指南</p>

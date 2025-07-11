@@ -97,14 +97,26 @@ section.sec2 li.violet .num_circle_Box .circle_out { background-color: #323471; 
     .num_circle_Box .circle_out { width: 30px; }
 
 }
-/* 그래프 */
-.graph_div { max-width: 1000px; height: 400px; margin: 0 auto;  }
 
 /* ==== main ==== */
 main {  }
 
 /* sec1 */
 section.sec1 {  }
+section.sec1 .logo_box { padding: 70px 0; text-align: center; background-color: #fff; }
+
+@media screen and (max-width: 1250px) {
+    section.sec1 .logo_box { padding: 50px 0; }
+    section.sec1 .logo_box .top_logo { width: 50%; }
+}
+@media screen and (max-width: 720px) {
+    section.sec1 .logo_box { padding: 40px 0; }
+    section.sec1 .logo_box .top_logo { width: 50%; }
+}
+@media screen and (max-width: 500px) {
+    section.sec1 .logo_box { padding: 25px 0; }
+    section.sec1 .logo_box .top_logo { width: 65%; }
+}
 
 /* sec2 */
 section.sec2 li.purple .title_box { background-color: #6272C4; }
@@ -139,6 +151,7 @@ section.sec2 ul li .item .text_2 { font-size: 22px; font-weight: 500; margin: 40
 section.sec2 ul li .item .text_2 span { margin-bottom: 25px; display: block; }
 section.sec2 ul li .item .text_bg { padding: 15px 30px; font-size: 28px; font-weight: 700; margin: 0 auto; display: inline-block; font-weight: 700; color: #fff; word-break: break-all; }
 
+
 @media screen and (max-width: 1250px) {
     section.sec2 .title_box { padding: 50px 10px; }
     section.sec2 ul li .item .text_bg { font-size: 24px; }
@@ -161,8 +174,10 @@ section.sec2 ul li .item .text_bg { padding: 15px 30px; font-size: 28px; font-we
 
 
 /* sec3 */
-section.sec3 {  }
-section.sec3 .inner { padding: 100px 0; background-color: #fff; }
+section.sec3 { position: relative; z-index: 3; }
+section.sec3 .sec3_blur1 { position: absolute; top: 0; left: 0; }
+section.sec3 .sec3_blur2 { position: absolute; bottom: 0; right: 0; }
+section.sec3 .inner { position: relative; z-index: 3; padding: 100px 0; background-color: #fff; }
 section.sec3 .dp_title { margin-bottom: 40px; }
 section.sec3 .sec3_div { max-width: 1065px; width: 100%; margin: 0 auto; }
 section.sec3 .mapBox { height: 540px;  overflow: hidden;  }
