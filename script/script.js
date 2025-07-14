@@ -11,7 +11,7 @@ const graphMove = () => {
   const chartCanvas = document.getElementById('myChart');
   const ctx = chartCanvas.getContext('2d');
   const iconImg = new Image();
-  iconImg.src = '/drpetit_konkuk/img/graph/logo.png';
+  iconImg.src = '/img/graph/logo.png';
 
   const imageLabelPlugin = {
     id: 'imageLabelPlugin',
@@ -30,15 +30,15 @@ const graphMove = () => {
       const imgHeight = imgWidth * (16 / 125);
 
       const imgX = leftPadding - 10;
-      const offsetDown = 50;  // 원하는 만큼 아래로 내림
-      const imgY = yPos - imgHeight - 60 + offsetDown;
+      const offsetDown = 30;  // 원하는 만큼 아래로 내림
+      const imgY = yPos - imgHeight - 40 + offsetDown;
 
       if (iconImg.complete) {
         ctx.drawImage(iconImg, imgX, imgY, imgWidth, imgHeight);
       }
 
       const width = chart.width;
-      const size = isMobile ? 20 : Math.round(width / 35);
+      const size = isMobile ? 16 : Math.round(width / 40);
 
       ctx.font = `${size}px 'Noto Serif', serif`;
       ctx.fillStyle = '#222';
@@ -139,7 +139,7 @@ const graphMove = () => {
               padding: (() => {
                 const w = window.innerWidth;
                 if (w < 400) return 0;
-                if (w < 500) return 0;
+                if (w < 500) return 10;
                 if (w < 550) return 10;
                 if (w < 600) return 20;     // 🔼 600px 구간 padding 넉넉하게
                 if (w < 800) return 12;
