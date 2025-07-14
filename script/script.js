@@ -145,6 +145,7 @@ const graphMove = () => {
                 if (w < 800) return 12;
                 return 14;
               })()
+
             }
           }
 
