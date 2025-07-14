@@ -18,38 +18,37 @@ const graphMove = () => {
     afterDatasetsDraw(chart) {
       const ctx = chart.ctx;
       const yAxis = chart.scales.y;
-  
+
       const labelIndex = chart.data.labels.indexOf('建国大学店');
       if (labelIndex === -1) return;
-  
+
       const yPos = yAxis.getPixelForTick(labelIndex);
       const leftPadding = chart.options.layout?.padding?.left ?? 70;
-      const isMobile = window.innerWidth < 600; // 모바일 체크
-  
-      // 모바일일 때 이미지 크기 키우기 (예: 0.22 vs 0.15)
+      const isMobile = window.innerWidth < 600;
+
       const imgWidth = chart.width * (isMobile ? 0.22 : 0.15);
       const imgHeight = imgWidth * (16 / 125);
-  
-      // 모바일일 때 imgX 오른쪽으로 이동
-      const imgX = isMobile ? (leftPadding - 10) : (leftPadding - 10);
-      const imgY = yPos - imgHeight / 2 + 20;
-  
+
+      const imgX = leftPadding - 10;
+      const offsetDown = 50;  // 원하는 만큼 아래로 내림
+      const imgY = yPos - imgHeight - 60 + offsetDown;
+
       if (iconImg.complete) {
         ctx.drawImage(iconImg, imgX, imgY, imgWidth, imgHeight);
       }
-  
+
       const width = chart.width;
-      const size = isMobile ? 20 : Math.round(width / 35); // 폰트 크기
-  
+      const size = isMobile ? 20 : Math.round(width / 35);
+
       ctx.font = `${size}px 'Noto Serif', serif`;
       ctx.fillStyle = '#222';
       ctx.textAlign = 'right';
       ctx.textBaseline = 'top';
-  
+
       const offsetX = isMobile ? 2 : 0;
       const textX = imgX + imgWidth + offsetX;
-      const textY = imgY - 4;
-  
+      const textY = yPos - size / 2 + offsetDown;
+
       const lines = ['建国大学', ' '];
       lines.forEach((line, i) => {
         ctx.fillText(line, textX, textY - (lines.length - 1 - i) * (size + 4));
@@ -98,7 +97,7 @@ const graphMove = () => {
               },
               font: context => {
                 const width = context.chart.width;
-                const isMobile = window.innerWidth < 600;
+                const isMobile = window.innerWidth < 700;
               
                 return {
                   size: isMobile ? 16 : Math.round(width / 50),
@@ -107,15 +106,28 @@ const graphMove = () => {
               },
               color: '#222',
             }
+            
           },
+
           y: {
             ticks: {
               font: context => {
                 const width = context.chart.width;
-                const isMobile = window.innerWidth < 600;
-              
+                const windowWidth = window.innerWidth;
+                let size;
+
+                if (windowWidth < 500) {
+                  size = 16;
+                } else if (windowWidth < 650) {
+                  size = 18;
+                } else if (windowWidth < 800) {
+                  size = 20;
+                } else {
+                  size = Math.round(width / 35);
+                }
+
                 return {
-                  size: isMobile ? 20 : Math.round(width / 35),
+                  size,
                   family: '"Noto Serif", serif',
                 };
               },
@@ -124,9 +136,19 @@ const graphMove = () => {
                 return label === '建国大学店' ? '　' : label;
               },
               color: '#222',
-              padding: 5,
+              padding: (() => {
+                const w = window.innerWidth;
+                if (w < 400) return 0;
+                if (w < 500) return 0;
+                if (w < 550) return 10;
+                if (w < 600) return 20;     // 🔼 600px 구간 padding 넉넉하게
+                if (w < 800) return 12;
+                return 14;
+              })()
             }
           }
+
+
         },
         plugins: {
           legend: {
@@ -135,15 +157,31 @@ const graphMove = () => {
           datalabels: {
             anchor: 'end',
             align: 'start',
-            color: '#fff',
+            offset: 20,
+            color: context => {
+              const index = context.dataIndex;
+              const label = context.chart.data.labels[index];
+              return label === '建国大学店' ? '#fff' : '#222';  // ✅ 마지막 막대만 흰색으로
+            },
+
             font: context => {
               const width = context.chart.width;
               const isMobile = window.innerWidth < 600;
+
+              const baseSize = isMobile ? 14 : 18;   // 모바일일 때 최소값
+              const maxSize = isMobile ? 20 : 30;    // 모바일일 때 최대값
+              const minWidth = 300;
+              const maxWidth = 800;
+
+              const ratio = Math.min(Math.max((width - minWidth) / (maxWidth - minWidth), 0), 1);
+              const size = Math.round(baseSize + (maxSize - baseSize) * ratio);
+
               return {
-                size: isMobile ? 30 : Math.round(width / 35),
+                size,
                 family: '"Noto Serif", serif',
               };
             }
+
           },
           title: false,
           tooltip: {
@@ -172,7 +210,6 @@ document.addEventListener('DOMContentLoaded', () => {
   observer.observe(document.getElementById('myChart'));
 
 })
-
 
 // sec3
 const sec3Slider = () => {

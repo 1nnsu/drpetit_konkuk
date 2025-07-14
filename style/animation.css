@@ -27,6 +27,11 @@
     0%, 100% { transform: scale(0.6); }
     50% { transform: scale(1.2); }
 }
+
+section.sec1 .inner .logo_box .top_logo { opacity: 0; }
+section.sec1 .inner.on .logo_box .top_logo { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; }
+
+
 .num_circle_Box .num { animation: circleNum 1.5s ease-in-out infinite; }
 .num_circle_Box .circle_out { animation: circleOut 1.5s ease-in-out infinite; }
 
