@@ -29,9 +29,9 @@ const graphMove = () => {
       const imgWidth = chart.width * (isMobile ? 0.22 : 0.15);
       const imgHeight = imgWidth * (16 / 125);
 
-      const imgX = leftPadding - 10;
+      const imgX = leftPadding - 5;
       const offsetDown = 30;  // 원하는 만큼 아래로 내림
-      const imgY = yPos - imgHeight - 40 + offsetDown;
+      const imgY = yPos - imgHeight - 50 + offsetDown;
 
       if (iconImg.complete) {
         ctx.drawImage(iconImg, imgX, imgY, imgWidth, imgHeight);
