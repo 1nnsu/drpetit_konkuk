@@ -11,7 +11,7 @@ const graphMove = () => {
   const chartCanvas = document.getElementById('myChart');
   const ctx = chartCanvas.getContext('2d');
   const iconImg = new Image();
-  iconImg.src = '../img/graph/logo.png';
+  iconImg.src = '/drpetit_konkuk/img/graph/logo.png';
 
   const imageLabelPlugin = {
     id: 'imageLabelPlugin',
