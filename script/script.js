@@ -12,6 +12,7 @@ const graphMove = () => {
   const ctx = chartCanvas.getContext('2d');
   const iconImg = new Image();
   iconImg.src = '/drpetit_konkuk/img/graph/logo.png';
+  // iconImg.src = '../img/graph/logo.png';
 
   const imageLabelPlugin = {
     id: 'imageLabelPlugin',
@@ -26,12 +27,12 @@ const graphMove = () => {
       const leftPadding = chart.options.layout?.padding?.left ?? 70;
       const isMobile = window.innerWidth < 600;
 
-      const imgWidth = chart.width * (isMobile ? 0.22 : 0.15);
-      const imgHeight = imgWidth * (16 / 125);
+      const imgWidth = chart.width * (isMobile ? 0.18 : 0.15); //이미지 가로
+      const imgHeight = imgWidth * (16 / 40); //이미지 세로 
 
-      const imgX = leftPadding - 5;
+      const imgX = (isMobile ? (leftPadding + 15) : (leftPadding + 25)) ;
       const offsetDown = 30;  // 원하는 만큼 아래로 내림
-      const imgY = yPos - imgHeight - 50 + offsetDown;
+      const imgY = (isMobile ? (yPos - imgHeight + offsetDown - 14) : (yPos - imgHeight + offsetDown)) ; //이미지 세로 위치
 
       if (iconImg.complete) {
         ctx.drawImage(iconImg, imgX, imgY, imgWidth, imgHeight);
@@ -45,14 +46,14 @@ const graphMove = () => {
       ctx.textAlign = 'right';
       ctx.textBaseline = 'top';
 
-      const offsetX = isMobile ? 2 : 0;
-      const textX = imgX + imgWidth + offsetX;
-      const textY = yPos - size / 2 + offsetDown;
+      // const offsetX = isMobile ? 2 : 0;
+      // const textX = imgX + imgWidth + offsetX;
+      // const textY = yPos - size / 2 + offsetDown;
 
-      const lines = ['建国大学', ' '];
-      lines.forEach((line, i) => {
-        ctx.fillText(line, textX, textY - (lines.length - 1 - i) * (size + 4));
-      });
+      // const lines = ['建国大学', ' '];
+      // lines.forEach((line, i) => {
+      //   ctx.fillText(line, textX, textY - (lines.length - 1 - i) * (size + 4));
+      // });
     }
   };
   
@@ -67,7 +68,7 @@ const graphMove = () => {
     new Chart(ctx, {
       type: 'bar',
       data: {
-        labels: ['A 本院特色', 'B 本院特色', '建国大学店'],
+        labels: ['A 皮肤科医院', 'B 皮肤科医院', '建国大学店'],
         datasets: [{
           label: '투표 수',
           data: [30, 25, 8],

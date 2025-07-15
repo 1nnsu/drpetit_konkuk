@@ -111,8 +111,16 @@ section.sec2 li.violet .num_circle_Box .circle_out { background-color: #323471; 
 main {  }
 
 /* sec1 */
-section.sec1 {  }
+section.sec1 { position: relative; z-index: 3; }
+section.sec1 .inner { position: relative; z-index: 3; }
+section.sec1 .sec1_blur { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 2; }
 section.sec1 .logo_box { padding: 70px 0; text-align: center; background-color: #fff; }
+section.sec1 .sec1_div { position: relative; }
+section.sec1 .sec1_div .sec1_bg { }
+section.sec1 .sec1_div .star_box {  }
+section.sec1 .sec1_div .star { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+section.sec1 .sec1_div .imgBox { position: absolute; bottom: 50px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 25px; }
+section.sec1 .sec1_div .imgBox .sec1_img  { max-width: unset; }
 
 @media screen and (max-width: 1250px) {
     section.sec1 .logo_box { padding: 50px 0; }
@@ -143,7 +151,9 @@ section.sec2 li.blue .dp_title .under { background: linear-gradient(to top, #003
 section.sec2 li.violet .dp_title .under { background: linear-gradient(to top, #323471 35%, transparent 35%); }
 
 
-section.sec2 { }
+section.sec2 { position: relative; }
+section.sec2 .inner { position: relative;}
+section.sec2 .sec2_blur { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
 section.sec2 ul {  }
 section.sec2 ul li { background-color: #F3EFEE; }
 

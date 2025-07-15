@@ -27,6 +27,18 @@
     0%, 100% { transform: scale(0.6); }
     50% { transform: scale(1.2); }
 }
+@keyframes shine {
+    0%, 100% { opacity: 0.3;  }
+    50% { opacity: 1; }
+}
+
+section.sec1 .sec1_div .imgBox .sec1_img { opacity: 0; }
+section.sec1 .sec1_div .imgBox.on .sec1_img1 { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; }
+section.sec1 .sec1_div .imgBox.on .sec1_img2 { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; animation-delay: 0.2s; }
+section.sec1 .sec1_div .imgBox.on .sec1_img3 { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; animation-delay: 0.4s;}
+
+section.sec1 .sec1_div .star1 { animation: shine 2s ease-in-out infinite; }
+section.sec1 .sec1_div .star2 { animation: shine 2s ease-in-out infinite; animation-delay: 1s; }
 
 section.sec1 .inner .logo_box .top_logo { opacity: 0; }
 section.sec1 .inner.on .logo_box .top_logo { animation: fadeIn 0.5s ease-in-out 0s 1 forwards running; }
